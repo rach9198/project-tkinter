@@ -32,6 +32,6 @@ for i in range(rows):
     #authentication
     if(sheet2.cell_value(i,0) == "ram"):
     
-root.mainloop()
+#root.mainloop()
 
 

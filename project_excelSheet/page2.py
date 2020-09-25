@@ -5,7 +5,7 @@ Created on Wed Sep 23 21:18:52 2020
 @author: rachana
 """
 from tkinter import *
-from openpyxl import *
+# from openpyxl import *
 import xlrd
 
 root = Tk()
@@ -14,11 +14,11 @@ root.title("Search Name")
 root.geometry('380x350')
 root.configure(bg="turquoise1")
 
-wb = load_workbook('C:\\Users\\rachana\\Desktop\\demo.xlsx')
-sheet = wb.active
+# wb = load_workbook('C:\\Users\\rachana\\Desktop\\demo.xlsx')
+# sheet = wb.active
 
 wb2 = xlrd.open_workbook('C:\\Users\\rachana\\Desktop\\demo.xlsx')
-sheet2 = wb2.sheet_by_index(0)
+sheet2 = wb2.sheet_by_index(0) #to start from 0
 
 row = sheet2.nrows
 col = sheet2.ncols
@@ -28,13 +28,42 @@ def searchName():
     
     for i in range(row):     
         if (sheet2.cell_value(i, 0) == sname_field.get()):
-            # print(sheet2.cell_value(i,0))
-            # print(sheet2.cell_value(i,2))
-            # name_field = StringVar()
-
-            name_field = (sheet2.cell_value(i, 0))
-            # sheet2.cell_value(i, 2)= f_field.set()
-            # sheet2.cell_value(i, 3)= l_field.set()    
+            n = sheet2.cell_value(i,0)
+            fn = sheet2.cell_value(i,1)
+            ln = sheet2.cell_value(i,2)
+            gn = sheet2.cell_value(i,3)
+            ag = sheet2.cell_value(i,4)
+            inter = sheet2.cell_value(i,5)
+            mon = sheet2.cell_value(i,6)
+            sda = sheet2.cell_value(i,7)
+           
+            name_field. = n
+            f_field = fn
+            l_field = ln
+            gen = gn
+            age = ag
+            intern_field = inter
+            month_field = mon
+            date_field = sda
+            
+            
+            
+            
+            # w = Tk()
+            # w.title("Person Details")
+            # w.geometry("500x500")
+            # w.configure(bg = "green")
+            
+            # l1 = Label(w, text = "Name: " +name)
+            # l1.place(x=10,y=10)
+            
+            
+            
+            # w.mainloop()
+            
+            
+            
+            
 
 sname = Label(root, text='SearchName').place(x=20,y=20)
 sname_field = Entry(root)
@@ -83,9 +112,9 @@ sdate = Label(root, text='Start-Date').place(x=20,y=280)
 date_field = Entry(root)
 date_field.place(x=90,y=280)
 
-myWidgets = [sname, name, fname, lname, gender, ages, intern, month, sdate ] # List of widgets to change colour
-for i in myWidgets:
-    print(wid)
+# myWidgets = [sname, name, fname, lname, gender, ages, intern, month, sdate ] # List of widgets to change colour
+# for i in myWidgets:
+#     print(wid)
     # wid.configure(bg = turquoise1)
 
 root.mainloop()
