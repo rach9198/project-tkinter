@@ -11,7 +11,7 @@ import pyttsx3
 voice = pyttsx3.init()
 
 #2 inbuilt method say
-voice.say("how are you")
+voice.say("coooool both of you")
 
 #3
 voice.runAndWait()

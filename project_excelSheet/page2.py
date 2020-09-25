@@ -37,14 +37,15 @@ def searchName():
             mon = sheet2.cell_value(i,6)
             sda = sheet2.cell_value(i,7)
            
-            name_field. = n
-            f_field = fn
-            l_field = ln
-            gen = gn
-            age = ag
-            intern_field = inter
-            month_field = mon
-            date_field = sda
+            print(n + fn + ln)
+            name_field.setvar(,n )
+            f_field.set = fn
+            # l_field = ln
+            # gen = gn
+            # age = ag
+            # intern_field = inter
+            # month_field = mon
+            # date_field = sda
             
             
             
