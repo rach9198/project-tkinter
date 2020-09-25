@@ -11,24 +11,25 @@ import json #data structure  - dict and tuple
 
 #mention url
 url = "https://www.fast2sms.com/dev/bulk"
-#sender_phno='7619190486'
+#sender_phno='XXXXXXXXXX'
 
 # message = "fst3sms test msg"
+
 #create dictionary key &value
 
 my_data = {
     'sender_id': 'FSTSMS',
-    'message': 'fst3sms test msg', 
+    'message': 'your msg', 
     
     'language': 'english',
     'route': 'p', 
-    'numbers': 7619190486
+    'numbers': 'XXXXXXXXXX'
 }
 
 #create authorixation doct
 
 headers = {
-    'authorization': 'ehX0fqukNSQ3zm9t1BbZ4JUsKHxrPOnpVic2dyoWv5ajMl8gTL4YM79kSC51tbIEK6yVjDwQFsmfB0ha',
+    #'authorization': 'ehX0fqukNSQ3zm9t1BbZ4JUsKHxrPOnpVic2dyoWv5ajMl8gTL4YM79kSC51tbIEK6yVjDwQFsmfB0ha',
     'content-Type':"application/x-www-form-urlencoded",
     'Cache-Control': "no-cache"
 }
